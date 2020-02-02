@@ -1,0 +1,80 @@
+﻿\documentclass[a4paper,11pt,oneside,openany]{jsbook}
+\bibliographystyle{junsrt}
+
+%%%%%%%%%%%%%%%%%%%利用パッケージ一覧%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}       %Latin Modern
+\usepackage{lmodern}           %Latin Modern
+\usepackage{amsmath,amssymb}  % 数式用
+\usepackage{bm}               % 太文字ベクトル用
+\usepackage[dvipdfmx, nosetpagesize]{graphicx} %画像用
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{ascmac}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{layout}
+\usepackage{caption}  %`キャプションのスタイル用
+\usepackage{booktabs} %for table
+\usepackage{float}
+\usepackage{multienum} %2段組
+%%%%%%%%%%%%%%%%%%%ドキュメントスタイル%%%%%%%%%%%%%%%%%%%%
+\setcounter{tocdepth}{2} %サブセクションまで目次に表示する
+\makeindex
+%
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{41\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.55in}
+
+%%%% ヘッダー・フッターの設定 %%%%
+\pagestyle{fancy}
+\lhead{\rightmark}
+\rfoot{\thepage}
+\cfoot{}
+\renewcommand{\chaptermark}[1]{\markboth{第\ \normalfont\thechapter\ 章~#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection #1}{}}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+
+%%%%%%%%%%%%%%%%%%ドキュメント開始%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\frontmatter
+
+%目次のカウント開始
+\tableofcontents
+\thispagestyle{fancy}
+%
+%本文開始
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%本文%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1.序論
+\include{./1_intro/1_main}
+
+% 2.関連研究
+\include{./2_related_works/2_main}
+
+% 3.提案手法
+\include{./3_proposed_method/3_main}
+
+% 4.実験
+\include{./4_experiment/4_main}
+
+% 5.考察
+\include{./5_consideration/5_main}
+
+% 6.結論
+\include{./6_conclusion/6_main}
+
+% 謝辞
+\include{./7_Thanks/7_main}
+
+% 引用
+%\include{./8_reference/8_main}
+\bibliography{ref}
+
+%添付資料
+\include{./8_appendix/8_main}
+
+\end{document}

@@ -1,2 +1,3 @@
-# master_thesis_tmplete
-修士論文テンプレート
+# master_thesis
+修士論文のテンプレートです。
+適当に使ってやってください。
